@@ -1,14 +1,18 @@
 /*
-** TailwindCSS Configuration File
-**
-** Docs: https://tailwindcss.com/docs/configuration
-** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
-*/
+ ** TailwindCSS Configuration File
+ **
+ ** Docs: https://tailwindcss.com/docs/configuration
+ ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
+ */
 module.exports = {
+  purge: {
+    enabled: true,
+    content: ['./assets/*', './pages/*', './layouts/*', './components/*'],
+  },
   theme: {
     fontFamily: {
-      'display': ['Alfa Slab One', 'Georgia', 'Cambria'],
-      'body': ['Montserrat', 'Arial', 'sans-serif']
+      display: ['Alfa Slab One', 'Georgia', 'Cambria'],
+      body: ['Montserrat', 'Arial', 'sans-serif'],
     },
     extend: {
       colors: {
@@ -22,10 +26,10 @@ module.exports = {
           '700': '#353535',
           '800': '#262626',
           '900': '#0c0c0c',
-        }
-      }
-    }
+        },
+      },
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
 }

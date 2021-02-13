@@ -1,7 +1,6 @@
 /* purgecss start ignore */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-/* purgecss end ignore */
 @import 'tailwindcss/utilities';
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
@@ -43,3 +42,5 @@ section {
     @apply my-24;
   }
 }
+
+/* purgecss end ignore */

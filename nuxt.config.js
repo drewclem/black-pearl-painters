@@ -36,7 +36,7 @@ export default {
    */
   modules: [
     [
-      'nuxt-fontAwesome',
+      'nuxt-fontawesome',
       {
         imports: [
           {

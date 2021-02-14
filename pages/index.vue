@@ -15,7 +15,7 @@ export default {
 
 <template>
   <div>
-    <section class="w-3/4 mx-auto text-center mt-12 mb-12">
+    <section class="w-3/4 mx-auto text-center mt-12 md:mt-24 xl:mt-20 mb-12">
       <h1 class="text-gray-600  text-4xl leading-tight md:text-5xl mb-4">
         Come Home to
         <span class="text-black">Quality.</span>
@@ -24,7 +24,7 @@ export default {
         Professional, Affordable, & Dependable Exterior Services -
         <br />including painting, cleaning, blind & shutter installation, and more!
       </p>
-      <button>
+      <button class="btn">
         <nuxt-link to="/get-in-touch" class="button hover:shadow-md">Request a Quote</nuxt-link>
       </button>
     </section>
@@ -75,7 +75,7 @@ export default {
               industrial coatings. This full service includes carpentry, prep work needed to make sure the substrate is
               ready for paint, and applying the coating.
             </p>
-            <div class="flex flex-wrap w-full lg:w-11/12 xl:w-3/4 text-base md:text-lg mx-auto mb-6">
+            <div class="grid grid-cols-2 w-3/4 mx-auto mb-4">
               <CheckText>Painting</CheckText>
               <CheckText>Window Coverings</CheckText>
               <CheckText>Coating</CheckText>
@@ -133,7 +133,7 @@ export default {
         <span class="font-semibold">(253) 203-5355</span> for a free consultation.
       </p>
 
-      <button>
+      <button class="btn">
         <nuxt-link to="/get-in-touch" class="button hover:shadow-md">Request a Quote</nuxt-link>
       </button>
     </section>

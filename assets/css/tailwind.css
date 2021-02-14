@@ -3,6 +3,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* purgecss end ignore */
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
 
 @font-face {
@@ -17,11 +19,11 @@
   transition: 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-button {
+.btn {
   @apply bg-gray-600 text-white px-4 text-xs py-2 shadow uppercase font-body;
 }
 
-button:hover {
+.btn:hover {
   @apply bg-gray-700;
   transform: scale(1.025);
   transition: 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -39,15 +41,3 @@ h5,
 h6 {
   @apply font-display font-bold tracking-widest;
 }
-
-section {
-  @apply my-12;
-}
-
-@media (min-width: 768px) {
-  section {
-    @apply my-24;
-  }
-}
-
-/* purgecss end ignore */

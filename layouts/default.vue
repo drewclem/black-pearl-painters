@@ -6,7 +6,7 @@
       <schedule-estimate />
     </div>
 
-    <main class="flex-grow mt-12 md:mt-24">
+    <main class="flex-grow">
       <nuxt />
     </main>
 

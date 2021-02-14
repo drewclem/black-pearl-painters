@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <div class="container mx-auto max-w-3xl px-4 md:px-0">
+  <div class="container mx-auto max-w-3xl px-4 md:px-0 mt-12">
     <BasePageHeading>10 Signs that you need a new paint job</BasePageHeading>
 
     <p>

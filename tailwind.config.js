@@ -6,7 +6,7 @@
  */
 module.exports = {
   purge: {
-    enabled: false,
+    enabled: true,
     content: ['./assets/*', './pages/*', './layouts/*', './components/*'],
   },
   theme: {

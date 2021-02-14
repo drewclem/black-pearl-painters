@@ -97,7 +97,9 @@ export default {
 </template>
 
 <style scoped>
+/* purgecss start ignore */
 .nuxt-link-active {
-  opacity: 100%;
+  @apply opacity-100;
 }
+/* purgecss end ignore */
 </style>

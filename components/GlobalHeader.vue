@@ -48,33 +48,17 @@ export default {
 
     <nav class="md:w-1/3 md:block text-xs lg:text-sm font-body">
       <ul :class="isOpen ? 'block' : 'hidden'" class="md:flex justify-between text-right md:text-left">
-        <li>
-          <nuxt-link
-            class="uppercase opacity-50 hover:opacity-100 py-3 md:py-0 md:border-none border-b border-b-gray-100"
-            to="/services"
-            >Services</nuxt-link
-          >
+        <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
+          <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/services">Services</nuxt-link>
         </li>
-        <li>
-          <nuxt-link
-            class="uppercase opacity-50 hover:opacity-100 py-3 md:py-0 md:border-none border-b border-b-gray-100"
-            to="/about-us"
-            >About Us</nuxt-link
-          >
+        <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
+          <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/about-us">About Us</nuxt-link>
         </li>
-        <li>
-          <nuxt-link
-            class="uppercase opacity-50 hover:opacity-100 py-3 md:py-0 md:border-none border-b border-b-gray-100"
-            to="/get-in-touch"
-            >Get in touch</nuxt-link
-          >
+        <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
+          <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/get-in-touch">Get in touch</nuxt-link>
         </li>
-        <li>
-          <nuxt-link
-            class="uppercase opacity-50 hover:opacity-100 py-3 md:py-0 md:border-none border-b border-b-gray-100"
-            to="/tips"
-            >Tips</nuxt-link
-          >
+        <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
+          <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/tips">Tips</nuxt-link>
         </li>
       </ul>
     </nav>

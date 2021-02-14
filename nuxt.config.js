@@ -37,25 +37,6 @@ export default {
   modules: [
     '@nuxtjs/svg',
     [
-      'nuxt-fontawesome',
-      {
-        imports: [
-          {
-            set: '@fortawesome/free-solid-svg-icons',
-            icons: ['fas'],
-          },
-          {
-            set: '@fortawesome/free-brands-svg-icons',
-            icons: ['fab'],
-          },
-          {
-            set: '@fortawesome/free-regular-svg-icons',
-            icons: ['far'],
-          },
-        ],
-      },
-    ],
-    [
       'nuxt-gmaps',
       {
         key: 'AIzaSyCeiGjIJUONCkYkhHY-NfCOwmleHZl75CI',

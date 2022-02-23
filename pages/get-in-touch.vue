@@ -17,11 +17,11 @@
           v-if="responseMessage"
           :class="
             `${
-              responseState === 'success' ? 'text-secondary-dark' : 'text-red-700'
-            } text-sm absolute bottom-0 mb-[-42px]`
+              responseState === 'success' ? 'text-green-700 bg-green-200' : 'text-red-700 bg-red-200'
+            } text-sm p-1 rounded`
           "
         >
-          {{ this.responseMessage }}
+          {{ responseMessages }}
         </p>
         <form @submit.prevent="handleSubmit" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
           <input class="hidden" type="hidden" name="form-name" value="contact" />

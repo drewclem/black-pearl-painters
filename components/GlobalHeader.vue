@@ -64,7 +64,7 @@ export default {
     </nav>
 
     <div class="hidden md:flex w-1/3 flex-wrap justify-end items-center">
-      <a href="/" class="hidden lg:block group">
+      <a href="tel:253-203-5355" class="hidden lg:block group">
         <IconPhone class="w-6 h-6 inline mr-2 text-gray-400" />
         <span class="text-xs">
           (253) 203-5355

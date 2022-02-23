@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <div class="container mx-auto px-4 md:px-0 mt-12">
+  <div class="container mx-auto px-4 lg:px-0 mt-12">
     <BasePageHeading>Our Services</BasePageHeading>
 
     <div class="md:grid grid-cols-2 gap-12">

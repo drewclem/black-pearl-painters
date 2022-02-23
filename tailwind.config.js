@@ -5,10 +5,6 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
-  purge: {
-    enabled: true,
-    content: ['./assets/*', './pages/*', './layouts/*', './components/*'],
-  },
   theme: {
     fontFamily: {
       display: ['Alfa Slab One', 'Georgia', 'Cambria'],

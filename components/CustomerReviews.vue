@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 md:px-0">
+  <div class="container mx-auto px-4 lg:px-0">
     <h2 class="text-xl md:text-3xl mb-6 md:text-center"><span class="text-gray-600">Customer</span> Reviews</h2>
 
     <div class="md:flex justify-between font-body">

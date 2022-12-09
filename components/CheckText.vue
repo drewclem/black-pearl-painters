@@ -1,8 +1,5 @@
 <script>
 import IconCheck from '@/assets/images/icons/icon-check.svg?inline'
-/*
- * What is this component? What does it do?
- */
 
 export default {
   components: {
@@ -12,12 +9,10 @@ export default {
 </script>
 
 <template>
-  <div>
-    <IconCheck class="inline mr-2 w-10 h-10 text-gray-500" />
-    <span class="">
+  <div class="flex">
+    <IconCheck class="mr-2 w-8 h-8 text-gray-500" />
+    <p class="w-full">
       <slot></slot>
-    </span>
+    </p>
   </div>
 </template>
-
-<style lang="postcss" scoped></style>

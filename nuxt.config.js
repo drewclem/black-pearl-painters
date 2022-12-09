@@ -39,7 +39,7 @@ export default {
     [
       'nuxt-gmaps',
       {
-        key: 'AIzaSyCeiGjIJUONCkYkhHY-NfCOwmleHZl75CI',
+        key: process.env.MAPS_API_KEY,
       },
     ],
   ],

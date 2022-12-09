@@ -1,16 +1,31 @@
 <template>
-  <div class="container mx-auto px-4 lg:px-0 mt-12">
+  <div class="container mx-auto px-4 lg:px-0 mt-12 mb-32">
     <h1 class="text-lg uppercase text-gray-400  tracking-widest font-bold mb-8">Get in Touch</h1>
     <div class="md:flex">
       <div class="md:w-1/2 pb-6 md:pb-0">
-        <h2 class="text-2xl text-black  font-bold mb-4">Lorem Ipsum Dolet</h2>
-        <p class="font-body text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
+        <h2 class="text-2xl text-black  font-bold mb-4">Contact Us Today!</h2>
+        <p class="font-body text-gray-600 mb-6">
+          We know some companies take days to get back to you and sometimes weeks to even provide you with a bid. We
+          change that and get back to you ASAP because we want to make sure to get you a bid and on our schedule as soon
+          as possible! Contact us today for a free estimate!
         </p>
+
+        <ul>
+          <li class="flex flex-col mb-4">
+            <h3>Justin Schulke (Owner/Estimator/Project Management)</h3>
+            <a class="opacity-50 underline hover:opacity-100" href="tel:2532035335">(253) 203-5335</a>
+            <a class="opacity-50 underline hover:opacity-100" href="mailto:justin.schulke@blackpearlpainters.com"
+              >Justin.Schulke@blackpearlpainters.com</a
+            >
+          </li>
+          <li class="flex flex-col">
+            <h3>Kellie Myler (Owner/Office Manager)</h3>
+            <a class="opacity-50 underline hover:opacity-100" href="tel:25392125495335">(253) 921-2549</a>
+            <a class="opacity-50 underline hover:opacity-100" href="mailto:kellie.myler@blackpearlpainters.com"
+              >Kellie.Myler@blackpearlpainters.com</a
+            >
+          </li>
+        </ul>
       </div>
       <div class="md:w-1/2 order-last md:order-first md:align-right md:pr-6">
         <p

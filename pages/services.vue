@@ -37,72 +37,81 @@ export default {
       <section class="my-24">
         <h2 class="text-lg md:text-xl mb-6">Residential Services</h2>
 
-        <article class="mb-24">
-          <h3 class="mb-3 opacity-75">Exterior Projects</h3>
-
-          <p>
-            From protecting your home from the elements, to providing a fresh modern upgrade, painting the exterior of
-            your home can significantly improve your curb appeal. Black Peal Painters only uses premium materials to
-            complete our projects. Here are some of the surfaces we apply coatings to everyday:
-          </p>
-
-          <div class="mb-4">
-            <CheckText>Siding/Soffits</CheckText>
-            <CheckText>Fascia/Trim</CheckText>
-            <CheckText>Masonry</CheckText>
-            <CheckText>Stucco</CheckText>
-            <CheckText>Garage Doors</CheckText>
-            <CheckText>Entry Doors</CheckText>
-          </div>
-
-          <p>
-            Carpentry Repairs – Most painting companies will not touch carpentry, but Black Pearl Painters has their own
-            carpentry division! We are used to completing work on soffit/facia, decks, railings, siding replacement,
-            chimney board, and fences.
-          </p>
-
-          <p>
-            Are you thinking outside the box, and don’t see a service listed? Our expert sales consultants, and
-            experienced project managers can turn your vision into a reality. We would love to answer any of your
-            questions! Sign up for an estimate today!
-          </p>
-        </article>
-
         <article>
           <h3 class="mb-3 opacity-75">Interior Projects</h3>
 
           <p>
-            If your rooms need a little color, or if they are begging for a makeover, a fresh coat of paint in a
-            striking new color can make a huge difference. If you dread the idea of taping, spackling, sanding, masking,
-            and of course painting—why not leave it all to the professionals? Here are some of the surfaces we are
-            applying coatings to everyday:
+            Your home or property is special, and—like many Americans—it is your biggest investment. At Black Pearl
+            Painters, we take great care of your property and possess the essential skills that are required for surface
+            preparation, and understanding the broad range of coating varieties.
+          </p>
+
+          <p>
+            We also have the ability to diagnose and solve the unique challenges of every project. Our skilled
+            professionals work to ensure that surfaces are properly prepared before starting any job, and extra
+            attention is given to the covering of areas that are not being painted. We understand the importance of a
+            job well done, which includes all aspects of the project from start to finish.
           </p>
 
           <div class="mb-4">
+            <h4 class="mb-2">Complete Interior Painting</h4>
             <CheckText>Walls</CheckText>
-            <CheckText>Trim/Moulding</CheckText>
             <CheckText>Ceilings</CheckText>
-            <CheckText>Popcorn/Stipple Ceilings</CheckText>
+            <CheckText>Doors</CheckText>
+            <CheckText>Windows</CheckText>
+            <CheckText>Baseboard, Crown and other Trim Mouldings</CheckText>
             <CheckText>Cabinets</CheckText>
-            <CheckText>Doors/Frames</CheckText>
           </div>
+          <div class="mb-4">
+            <h4 class="mb-2">Other Interior Services</h4>
+            <CheckText>Cabinetry</CheckText>
+            <CheckText>Entertainment Systems</CheckText>
+            <CheckText>Kitchen Cabinets</CheckText>
+          </div>
+        </article>
+
+        <article class="mb-24">
+          <h3 class="mb-3 opacity-75">Exterior Projects</h3>
 
           <p>
-            Do you not see the type of service you are looking for? Not many things surprise us anymore. We have done
-            many custom finishes on various surfaces, so don’t hesitate to ask! Who knows, that “crazy” vision you have
-            may not be so crazy after all. Sign up for an estimate today!
+            We offer a complete line of exterior services to cover any painting project. All painted surfaces will be
+            properly prepared before receiving any finishes. We only use premium prep and final materials and paint to
+            ensure a long-lasting paint job.
           </p>
+
+          <div class="mb-4">
+            <h4 class="mb-2">Complete Exterior Painting</h4>
+            <CheckText>Wood, Composite &amp; Vinyl Siding</CheckText>
+            <CheckText>Concrete</CheckText>
+            <CheckText>Doors &amp; Windows</CheckText>
+            <CheckText>Fascia and Eaves</CheckText>
+            <CheckText>Decks, Railings, and Patio Covers</CheckText>
+            <CheckText>Wrought Iron Fences, Railings</CheckText>
+          </div>
+
+          <div class="mb-4">
+            <h4 class="mb-2">Other Related Services/Replacement Services</h4>
+            <CheckText>Wood Replacement</CheckText>
+            <CheckText>Wood Rot Replacement</CheckText>
+            <CheckText>Wood Repairs</CheckText>
+            <CheckText>Light Carpentry</CheckText>
+            <CheckText>Decks and Patio Covers</CheckText>
+            <CheckText>Mildewcide Paint Additives</CheckText>
+          </div>
         </article>
       </section>
 
       <section class="my-24">
-        <h2>Commercial and Industrial</h2>
+        <h2>Commercial and Industrial Painting</h2>
         <p>
-          We love commercial and industrial coatings! We can do anything from new construction buildings to repaints of
-          existing buildings that need a face lift! We have completed projects for the like of Puget Sound Energy,
-          Doscusign, and Zulily (sponsor of the Seattle Sounder Soccer Team). If you need budgetary numbers, a
-          specification for the project, or a plan on how to complete these projects, we can help! Sign up for an
-          estimate today!
+          Keeping your business looking its best reflects the level of care and attention you give to your customers. At
+          Black Pearl Painters we are able to provide services that go beyond giving your building a fresh coat of
+          paint. We take care to complete the job as quickly and efficiently as possible while staying out of the way so
+          you can continue to serve your customers. We love commercial and industrial coatings! We can do anything from
+          new construction buildings to repaints of existing buildings that need a face lift! We have completed projects
+          for the like of Puget Sound Energy, Doscusign, and Zulily (sponsor of the Seattle Sounder Soccer Team). If you
+          need budgetary numbers, a specification for the project, or a plan on how to complete these projects, we can
+          help! Sign up for an estimate today!
         </p>
       </section>
 
@@ -113,6 +122,35 @@ export default {
           painting projects in the Puget Sound and surrounding areas. We not only work with HOA members, but also the
           property management companies who help manage your properties. We can help with budgetary numbers,
           specifications, and notification systems for all tenants. Sign up for an estimate today!
+        </p>
+
+        <div class="mb-4">
+          <h4 class="mb-2">Services Include</h4>
+          <CheckText>Exterior Painting</CheckText>
+          <CheckText>Interior Painting</CheckText>
+          <CheckText>Pressure Washing and Cleaning</CheckText>
+          <CheckText>Caulking</CheckText>
+          <CheckText>Contrete Tilt-up buildings</CheckText>
+          <CheckText>Epoxy Flooring Systems</CheckText>
+          <CheckText>Graffiti Removal &amp; Anti-Graffiti coatings</CheckText>
+          <CheckText>Warehouse Ceiling and Ceiling Painting</CheckText>
+          <CheckText>Waterproofing Elastomeric Paint Systems</CheckText>
+          <CheckText>Remove, Replace, or Repairing Expansion Joints</CheckText>
+        </div>
+      </section>
+
+      <section class="my-24">
+        <h2>Carpentry</h2>
+        <p>
+          Do you have some pre-painting or pre-staining carpentry needs? Let the seriously great carpenters of Black
+          Pearl take care of it for you!
+        </p>
+        <p>
+          There’s no need to use a separate contractor before your painting project, we have a team of seriously amazing
+          carpenters ready to handle projects large and small. Black Pearl’s carpenters can expertly reside our home,
+          complete extensive or simple rot repairs, and/or install composite decking. Enjoy the benefits of working with
+          a single team for your carpentry and painting needs and avoid having the headaches of juggling multiple
+          contractors. Reach out today if you need help!
         </p>
       </section>
     </div>

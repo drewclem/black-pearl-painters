@@ -13,6 +13,17 @@ export default {
 
 <template>
   <div>
+    <section class="container mx-auto text-center px-4 mb-12">
+      <h2 class="text-xl md:text-3xl  mb-2"><span class="text-gray-600">Ready to</span> Get Started?</h2>
+      <p class="font-body text-gray-600 mb-4">
+        Click the button below to request a free quote - Or call us at
+        <a href="tel:2532035335" class="font-semibold">(253) 203-5335</a> for a free consultation.
+      </p>
+
+      <button class="btn">
+        <nuxt-link to="/get-in-touch" class="button hover:shadow-md">Request a Quote</nuxt-link>
+      </button>
+    </section>
     <footer class="py-10 px-4">
       <div class="container mx-auto md:flex items-center">
         <nav class="text-xs md:w-1/3 mb-4 md:mb-0">

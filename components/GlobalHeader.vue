@@ -23,6 +23,11 @@ export default {
       return this.$route.path
     },
   },
+  watch: {
+    $route(to, from) {
+      this.isOpen = false
+    },
+  },
 
   methods: {
     toggleNav: function() {
@@ -47,20 +52,22 @@ export default {
     </div>
 
     <nav class="md:w-1/3 md:block text-xs lg:text-sm font-body">
-      <ul :class="isOpen ? 'block' : 'hidden'" class="md:flex justify-between text-right md:text-left">
-        <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-          <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/services">Services</nuxt-link>
-        </li>
-        <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-          <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/about-us">About Us</nuxt-link>
-        </li>
-        <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-          <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/get-in-touch">Get in touch</nuxt-link>
-        </li>
-        <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-          <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/tips">Tips</nuxt-link>
-        </li>
-      </ul>
+      <transition name="slide" appear>
+        <ul :class="isOpen ? 'block' : 'hidden'" class="md:flex justify-between text-right md:text-left">
+          <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
+            <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/services">Services</nuxt-link>
+          </li>
+          <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
+            <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/about-us">About Us</nuxt-link>
+          </li>
+          <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
+            <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/get-in-touch">Get in touch</nuxt-link>
+          </li>
+          <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
+            <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/tips">Tips</nuxt-link>
+          </li>
+        </ul>
+      </transition>
     </nav>
 
     <div class="hidden md:flex w-1/3 flex-wrap justify-end items-center">
@@ -84,6 +91,19 @@ export default {
 /* purgecss start ignore */
 .nuxt-link-active {
   @apply opacity-100;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 150ms ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .slide-enter-from,
+  .slide-leave-to {
+    opacity: 0;
+    transform: translateY(100%) !important;
+  }
 }
 /* purgecss end ignore */
 </style>

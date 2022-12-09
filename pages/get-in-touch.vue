@@ -36,7 +36,7 @@
             } text-sm p-1 rounded`
           "
         >
-          {{ responseMessages }}
+          {{ responseMessage }}
         </p>
         <form @submit.prevent="handleSubmit" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
           <input class="hidden" type="hidden" name="form-name" value="contact" />

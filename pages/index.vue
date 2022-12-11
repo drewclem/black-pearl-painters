@@ -126,7 +126,7 @@ export default {
       </p>
     </section> -->
 
-    <!-- <customer-reviews class="my-32" /> -->
+    <customer-reviews class="my-32" />
 
     <google-map class="mb-12 md:mb-24" />
 

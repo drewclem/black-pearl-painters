@@ -1,14 +1,60 @@
+const title = 'Black Pearl Painters'
+const description =
+  'Serving the upper North West with professional, affordable, & dependable interior and exterior services - including painting, carpentry, & siding, and more!'
+const ogImage = 'https://www.blackpearlpainters.com/og-image.png'
+const url = 'https://www.blackpearlpainters.com'
+
 export default {
   target: 'static',
   /*
    ** Headers of the page
    */
   head: {
-    title: 'Black Pearl Painters' || '',
+    title: 'Black Pearl Painters',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Black Pearl Painters' || '' },
+      { hid: 'description', name: 'description', content: 'Black Pearl Painters' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://www.blackpearlpainters.com',
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: title,
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: description,
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: ogImage,
+      },
+      {
+        hid: 'twitter:url',
+        property: 'twitter:url',
+        content: url,
+      },
+      {
+        hid: 'twitter:description',
+        property: 'twitter:description',
+        content: description,
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: ogImage,
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/bpp-reverse-medallion.png' }],
   },

@@ -42,7 +42,17 @@ export default {
         key: process.env.MAPS_API_KEY,
       },
     ],
+    'nuxt-fontawesome',
   ],
+
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas'],
+      },
+    ],
+  },
   /*
    ** Build configuration
    */

@@ -2,7 +2,7 @@
   <div class="flex flex-col min-h-screen overflow-x-hidden">
     <global-header />
 
-    <div class="estimate-btn fixed z-50 ml-3 bottom-0 mb-3">
+    <div class="estimate-btn fixed z-50 right-0 mr-3">
       <schedule-estimate />
     </div>
 
@@ -27,3 +27,16 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.estimate-btn {
+  bottom: 0;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1220px) {
+  .estimate-btn {
+    top: 50%;
+    margin-top: -12px;
+  }
+}
+</style>

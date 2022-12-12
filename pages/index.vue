@@ -21,8 +21,8 @@ export default {
         <span class="text-black">Quality.</span>
       </h1>
       <p class="text-sm md:text-lg text-gray-600 mx-auto mb-10">
-        Professional, Affordable, & Dependable Exterior Services -
-        <br />including painting, cleaning, blind & shutter installation, and more!
+        Professional, Affordable, &amp; Dependable Interior and Exterior Services -
+        <br />including painting, carpentry, &amp; siding, and more!
       </p>
       <button class="btn">
         <nuxt-link to="/get-in-touch" class="button hover:shadow-md">Request a Quote</nuxt-link>
@@ -80,7 +80,7 @@ export default {
       </div>
     </section>
 
-    <section class="roller-bg">
+    <section class="roller-bg 2xl:py-32">
       <div class="container mx-auto lg:pb-24 xl:pb-48 mb-24 md:flex px-4 lg:items-center">
         <h2 class="block md:hidden text-xl mb-8">
           Get to Know Black Pearl Painters
@@ -139,7 +139,7 @@ export default {
       </div>
     </section> -->
 
-    <!-- <section class="blue-roller-bg md:py-6 lg:py-10 mb-12 md:mb-20">
+    <section class="blue-roller-bg md:py-6 lg:py-10 2xl:py-56 mb-12 md:mb-20">
       <div class="container mx-auto md:py-40 lg:py-64 md:text-white px-4">
         <h2 class="text-2xl md:text-4xl mb-2">
           Areas Serviced
@@ -151,7 +151,7 @@ export default {
           <li>Kitsap County</li>
         </ul>
       </div>
-    </section> -->
+    </section>
   </div>
 </template>
 
@@ -184,12 +184,6 @@ export default {
   .roller-bg {
     background-position-y: -90px;
     background-position-x: 250px;
-  }
-}
-
-@media (min-width: 2560px) {
-  .roller-bg {
-    background-image: none;
   }
 }
 </style>

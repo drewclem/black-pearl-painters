@@ -11,6 +11,9 @@ module.exports = {
       body: ['Montserrat', 'Arial', 'sans-serif'],
     },
     extend: {
+      screens: {
+        '2xl': '1536px',
+      },
       colors: {
         gray: {
           '100': '#eaeaea',

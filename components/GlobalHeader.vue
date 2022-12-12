@@ -40,11 +40,7 @@ export default {
   <div class="p-3 md:flex flex-wrap justify-between items-center">
     <div class="flex md:w-1/3 md:block justify-between">
       <nuxt-link to="/">
-        <img
-          src="~/assets/images/bpp-header-logo.svg"
-          alt="Black Pearl Painters company logo"
-          class="w-3/4 md:w-7/12"
-        />
+        <img src="~/assets/images/bpp-header-logo.svg" alt="Black Pearl Painters company logo" class="w-3/4 md:w-5/6" />
       </nuxt-link>
       <button class="md:hidden" type="button" @click="toggleNav">
         <IconMenu class="w-10 h-10 text-gray-600" />

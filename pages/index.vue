@@ -86,7 +86,11 @@ export default {
           Get to Know Black Pearl Painters
         </h2>
         <div class="md:w-1/2 md:pl-4 pb-4 md:order-last">
-          <img src="~/assets/images/house-temp.png" class="w-full" />
+          <img
+            class="featured-img"
+            src="~/assets/images/featured_house.jpg"
+            alt="A freshly painted beige two story, complete with a three car garage, sits in a perfectly curated yard with lush hedges and red floweres sprinkled throughout."
+          />
         </div>
         <div class="md:w-1/2 md:pr-4">
           <h2 class="hidden md:block text-3xl mb-4">
@@ -185,5 +189,10 @@ export default {
     background-position-y: -90px;
     background-position-x: 250px;
   }
+}
+
+.featured-img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
 }
 </style>

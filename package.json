@@ -15,7 +15,8 @@
     "@nuxtjs/svg": "^0.1.12",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
-    "nuxt-gmaps": "^1.1.8"
+    "nuxt-gmaps": "^1.1.8",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0"

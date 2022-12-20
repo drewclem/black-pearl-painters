@@ -56,7 +56,13 @@ export default {
         content: ogImage,
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/bpp-reverse-medallion.png' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/bpp-reverse-medallion.png' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap'
+      }
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -106,6 +112,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
+    extend(config, ctx) { },
   },
 }

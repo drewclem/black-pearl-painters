@@ -161,7 +161,7 @@
             <textarea
               id="comments"
               rows="8"
-              class="w-full border b-gray-400"
+              class="w-full border b-gray-400 p-1"
               v-model="form.comments"
               required
             ></textarea>

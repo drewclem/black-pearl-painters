@@ -30,7 +30,7 @@ export default {
   },
 
   methods: {
-    toggleNav: function() {
+    toggleNav: function () {
       this.isOpen = !this.isOpen
     },
   },
@@ -51,34 +51,39 @@ export default {
       <transition name="slide" appear>
         <ul :class="isOpen ? 'block' : 'hidden'" class="md:flex justify-between text-right md:text-left">
           <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-            <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/services">Services</nuxt-link>
+            <nuxt-link class="uppercase opacity-50 hover:opacity-100" to="/services">Services</nuxt-link>
           </li>
           <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-            <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/about-us">About Us</nuxt-link>
+            <nuxt-link class="uppercase opacity-50 hover:opacity-100" to="/about-us">About Us</nuxt-link>
           </li>
           <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-            <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/get-in-touch">Get in touch</nuxt-link>
+            <nuxt-link class="uppercase opacity-50 hover:opacity-100" to="/get-in-touch">Get in touch</nuxt-link>
           </li>
           <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-            <nuxt-link class="uppercase opacity-50 hover:opacity-100 " to="/tips">Tips</nuxt-link>
+            <nuxt-link class="uppercase opacity-50 hover:opacity-100" to="/tips">Tips</nuxt-link>
           </li>
         </ul>
       </transition>
     </nav>
 
-    <div class="hidden md:flex w-1/3 flex-wrap justify-end items-center">
-      <a href="tel:253-203-5355" class="hidden lg:block group">
-        <IconPhone class="w-6 h-6 inline mr-2 text-gray-400" />
-        <span class="text-xs">
-          (253) 203-5355
-        </span>
-      </a>
-      <a href="https://www.facebook.com/BlackPearlPainters/" class="hidden lg:block ml-6 mr-2">
-        <IconFacebook class="w-6 h-6 text-gray-400 hover:text-gray-600" />
-      </a>
-      <button class="btn ml-6">
-        <nuxt-link to="/get-in-touch" class="button hover:shadow-md">Request a Quote</nuxt-link>
-      </button>
+    <div class="relative hidden md:block">
+      <div class="w-full flex flex-wrap justify-end items-center">
+        <a href="tel:253-203-5355" class="hidden lg:block group">
+          <IconPhone class="w-6 h-6 inline mr-2 text-gray-400" />
+          <span class="text-xs"> (253) 203-5355 </span>
+        </a>
+        <a href="https://www.facebook.com/BlackPearlPainters/" class="hidden lg:block ml-6 mr-2">
+          <IconFacebook class="w-6 h-6 text-gray-400 hover:text-gray-600" />
+        </a>
+        <button class="btn ml-6">
+          <nuxt-link to="/get-in-touch" class="button hover:shadow-md">Request a Quote</nuxt-link>
+        </button>
+      </div>
+      <img
+        src="~/assets/images/2022Banner_6Mo_SAC_HZ.png"
+        alt="6 Months same as cash financing available."
+        class="absolute w-56 right-0 mt-2"
+      />
     </div>
   </div>
 </template>

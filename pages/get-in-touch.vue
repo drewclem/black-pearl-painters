@@ -141,7 +141,7 @@
                 <select
                   id="howdYouHear"
                   class="w-full appearance-none border b-gray-300 p-1 rounded-none bg-white"
-                  v-model="form.timeToContact"
+                  v-model="form.howdYouHear"
                   required
                 >
                   <option selected disabled>Select One</option>

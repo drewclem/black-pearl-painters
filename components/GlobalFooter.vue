@@ -27,11 +27,13 @@ export default {
           </button>
         </div>
 
+        <a href="https://onlineappintegration.enerbank.com/">
         <img
           src="~/assets/images/2022Banner_6Mo_SAC_HZ.png"
           alt="6 Months same as cash financing available."
           class="w-64"
         />
+        </a>
       </div>
     </section>
     <footer class="py-10 px-4">
@@ -71,12 +73,6 @@ export default {
           <a href="https://www.facebook.com/BlackPearlPainters/" class="hidden lg:block ml-6 mr-2">
             <IconFacebook class="w-6 h-6 text-gray-400 hover:text-gray-600" />
           </a>
-
-          <div style="font-size: 11px; display: block; text-align: center; font-family: arial; width: 100px">
-            <a href="http://www.postcardmania.com/?bid=964821" target="_blank" border="0"
-              ><img src="//mypostcardmania.com/mailbox/img/0307678m.png" alt="Postcard Advertising" width="100px" /></a
-            ><br />
-          </div>
         </div>
       </div>
     </footer>

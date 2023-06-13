@@ -79,11 +79,13 @@ export default {
           <nuxt-link to="/get-in-touch" class="button hover:shadow-md">Request a Quote</nuxt-link>
         </button>
       </div>
-      <img
-        src="~/assets/images/2022Banner_6Mo_SAC_HZ.png"
-        alt="6 Months same as cash financing available."
-        class="absolute w-56 right-0 mt-2"
-      />
+      <a href="https://onlineappintegration.enerbank.com/">
+        <img
+          src="~/assets/images/2022Banner_6Mo_SAC_HZ.png"
+          alt="6 Months same as cash financing available."
+          class="absolute w-56 right-0 mt-2"
+        />
+      </a>
     </div>
   </div>
 </template>

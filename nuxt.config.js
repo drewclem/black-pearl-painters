@@ -1,3 +1,5 @@
+const axios = require('axios')
+
 const title = 'Black Pearl Painters'
 const description =
   'Serving the upper North West with professional, affordable, & dependable interior and exterior services - including painting, carpentry, & siding, and more!'
@@ -95,28 +97,29 @@ export default {
 
       const routes = ['/']
 
-      // const getRoutes = async ignoreFiles => {
-      //   axios.get(`https://api-us.storyblok.com/v2/cdn/spaces/me?token=${token}`).then(space_res => {
-      //     // timestamp of latest publish
-      //     cacheVersion = space_res.data.space.version
-      //     // Call for all Links using the Links API: https://www.storyblok.com/docs/Delivery-Api/Links
-      //     axios
-      //       .get(`https://api-us.storyblok.com/v2/cdn/links?token=${token}&version=${version}&cv=${cacheVersion}`)
-      //       .then(res => {
-      //         Object.keys(res.data.links).forEach(key => {
-      //           if (!ignoreFiles.includes(res.data.links[key].slug)) {
-      //             if (!(res.data.links[key].is_folder && !res.data.links[key].is_startpage)) {
-      //               routes.push('/' + res.data.links[key].slug)
-      //             }
-      //           }
-      //         })
+      const getRoutes = async ignoreFiles => {
+        axios.get(`https://api-us.storyblok.com/v2/cdn/spaces/me?token=${token}`).then(space_res => {
+          // timestamp of latest publish
+          cacheVersion = space_res.data.space.version
+          // Call for all Links using the Links API: https://www.storyblok.com/docs/Delivery-Api/Links
+          axios
+            .get(`https://api-us.storyblok.com/v2/cdn/links?token=${token}&version=${version}&cv=${cacheVersion}`)
+            .then(res => {
+              Object.keys(res.data.links).forEach(key => {
+                if (!ignoreFiles.includes(res.data.links[key].slug)) {
+                  if (!(res.data.links[key].is_folder && !res.data.links[key].is_startpage)) {
+                    routes.push('/' + res.data.links[key].slug)
+                  }
+                }
+              })
 
-      //         callback(null, routes)
-      //       })
-      //   })
-      // }
+              console.log(routes)
+              callback(null, routes)
+            })
+        })
+      }
 
-      // getRoutes(ignoreFiles)
+      getRoutes(ignoreFiles)
 
       return routes
     },
@@ -150,6 +153,10 @@ export default {
     ],
     'nuxt-fontawesome',
   ],
+
+  axios: {
+    baseURL: '/'
+  },
 
   fontawesome: {
     imports: [

@@ -1,16 +1,3 @@
-<script>
-import IconPhone from '@/assets/images/icons/icon-phone.svg?inline'
-import IconFacebook from '@/assets/images/icons/icon-facebook.svg?inline'
-
-export default {
-  name: 'GlobalFooter',
-  components: {
-    IconPhone,
-    IconFacebook,
-  },
-}
-</script>
-
 <template>
   <div>
     <section class="container mx-auto text-center px-4 mb-12">
@@ -28,11 +15,11 @@ export default {
         </div>
 
         <a href="https://onlineappintegration.enerbank.com/">
-        <img
-          src="~/assets/images/2022Banner_6Mo_SAC_HZ.png"
-          alt="6 Months same as cash financing available."
-          class="w-64"
-        />
+          <img
+            src="~/assets/images/2022Banner_6Mo_SAC_HZ.png"
+            alt="6 Months same as cash financing available."
+            class="w-64"
+          />
         </a>
       </div>
     </section>
@@ -40,17 +27,8 @@ export default {
       <div class="container mx-auto md:flex items-center">
         <nav class="text-xs md:w-1/3 mb-4 md:mb-0">
           <ul class="flex justify-between">
-            <li class="uppercase pr-2 text-gray-500 hover:text-gray-900">
-              <nuxt-link to="/services">Services</nuxt-link>
-            </li>
-            <li class="uppercase pr-2 text-gray-500 hover:text-gray-900">
-              <nuxt-link to="/about-us">About Us</nuxt-link>
-            </li>
-            <li class="uppercase text-gray-500 hover:text-gray-900">
-              <nuxt-link to="/get-in-touch">Get in touch</nuxt-link>
-            </li>
-            <li class="uppercase pr-2 text-gray-500 hover:text-gray-900">
-              <nuxt-link to="/tips">Tips</nuxt-link>
+            <li v-for="item in footerNavigation" :key="item._uid" class="uppercase pr-2 text-gray-500 hover:text-gray-900">
+              <nuxt-link :to="$formRoute({url: item.link.cached_url})">{{ item.label }}</nuxt-link>
             </li>
           </ul>
         </nav>
@@ -58,7 +36,7 @@ export default {
         <div class="md:w-1/3 mb-4 md:mb-0">
           <nuxt-link to="/">
             <img
-              src="~/assets/images/bpp-reverse-medallion.svg"
+              :src="footerLogo.filename"
               alt="Black Pearl Painters logo"
               class="w-5/12 mx-auto"
             />
@@ -78,3 +56,20 @@ export default {
     </footer>
   </div>
 </template>
+
+<script>
+import { mapState } from 'vuex'
+import IconPhone from '@/assets/images/icons/icon-phone.svg?inline'
+import IconFacebook from '@/assets/images/icons/icon-facebook.svg?inline'
+
+export default {
+  name: 'GlobalFooter',
+  components: {
+    IconPhone,
+    IconFacebook,
+  },
+  computed: {
+    ...mapState('global', ['footerLogo', 'footerNavigation'])
+  }
+}
+</script>

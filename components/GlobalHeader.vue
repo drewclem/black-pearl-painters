@@ -1,46 +1,13 @@
-<script>
-import IconPhone from '@/assets/images/icons/icon-phone.svg?inline'
-import IconFacebook from '@/assets/images/icons/icon-facebook.svg?inline'
-import IconMenu from '@/assets/images/icons/icon-menu.svg?inline'
-
-export default {
-  name: 'GlobalHeader',
-  components: {
-    IconPhone,
-    IconFacebook,
-    IconMenu,
-  },
-
-  data() {
-    return {
-      isOpen: false,
-      activeClass: 'active',
-    }
-  },
-
-  computed: {
-    currentPage() {
-      return this.$route.path
-    },
-  },
-  watch: {
-    $route(to, from) {
-      this.isOpen = false
-    },
-  },
-
-  methods: {
-    toggleNav: function () {
-      this.isOpen = !this.isOpen
-    },
-  },
-}
-</script>
 <template>
   <div class="p-3 md:flex flex-wrap justify-between items-center">
     <div class="flex md:w-1/3 md:block justify-between">
       <nuxt-link to="/">
-        <img src="~/assets/images/bpp-header-logo.svg" alt="Black Pearl Painters company logo" class="w-3/4 md:w-5/6" />
+        <img
+          v-if="headerLogo"
+          :src="headerLogo.filename"
+          alt="Black Pearl Painters company logo"
+          class="w-3/4 md:w-5/6"
+        />
       </nuxt-link>
       <button class="md:hidden" type="button" @click="toggleNav">
         <IconMenu class="w-10 h-10 text-gray-600" />
@@ -50,17 +17,14 @@ export default {
     <nav class="md:w-1/3 md:block text-xs lg:text-sm font-body">
       <transition name="slide" appear>
         <ul :class="isOpen ? 'block' : 'hidden'" class="md:flex justify-between text-right md:text-left">
-          <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-            <nuxt-link class="uppercase opacity-50 hover:opacity-100" to="/services">Services</nuxt-link>
-          </li>
-          <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-            <nuxt-link class="uppercase opacity-50 hover:opacity-100" to="/about-us">About Us</nuxt-link>
-          </li>
-          <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-            <nuxt-link class="uppercase opacity-50 hover:opacity-100" to="/get-in-touch">Get in touch</nuxt-link>
-          </li>
-          <li class="py-3 md:py-0 md:border-none border-b border-b-gray-100">
-            <nuxt-link class="uppercase opacity-50 hover:opacity-100" to="/tips">Tips</nuxt-link>
+          <li
+            v-for="menu in headerNavigation"
+            :key="menu._uid"
+            class="py-3 md:py-0 md:border-none border-b border-b-gray-100"
+          >
+            <nuxt-link class="uppercase opacity-50 hover:opacity-100" :to="$formRoute({url: menu.link.cached_url})">
+              {{ menu.label }}
+            </nuxt-link>
           </li>
         </ul>
       </transition>
@@ -89,6 +53,47 @@ export default {
     </div>
   </div>
 </template>
+
+<script>
+import { mapState } from 'vuex'
+import IconPhone from '@/assets/images/icons/icon-phone.svg?inline'
+import IconFacebook from '@/assets/images/icons/icon-facebook.svg?inline'
+import IconMenu from '@/assets/images/icons/icon-menu.svg?inline'
+
+export default {
+  name: 'GlobalHeader',
+  components: {
+    IconPhone,
+    IconFacebook,
+    IconMenu,
+  },
+
+  data() {
+    return {
+      isOpen: false,
+      activeClass: 'active',
+    }
+  },
+
+  computed: {
+    ...mapState('global', ['headerLogo', 'headerNavigation', 'loaded']),
+    currentPage() {
+      return this.$route.path
+    },
+  },
+  watch: {
+    $route(to, from) {
+      this.isOpen = false
+    },
+  },
+
+  methods: {
+    toggleNav: function () {
+      this.isOpen = !this.isOpen
+    },
+  },
+}
+</script>
 
 <style scoped>
 /* purgecss start ignore */

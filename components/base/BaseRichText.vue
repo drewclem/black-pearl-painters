@@ -55,7 +55,18 @@ export default {
 }
 
 /deep/ ul {
-  @apply list-disc ml-6;
+  @apply ml-6 relative;
+}
+
+/deep/ ul li::before {
+  content: url(../../assets/images/icons/icon-check.svg);
+  left: -2rem;
+
+  @apply absolute mt-1 w-6 h-6;
+}
+
+/deep/ hr {
+  @apply my-16;
 }
 
 /deep/ ol {

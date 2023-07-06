@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-3xl mx-auto my-12 lg:my-20">
+  <section class="max-w-3xl mx-auto my-12 lg:my-20 px-6 md:px-0">
     <BaseRichText :content="this.block.content" />
   </section>
 </template>

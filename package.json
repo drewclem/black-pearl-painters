@@ -21,7 +21,7 @@
     "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^1.0.0",
+    "@nuxtjs/tailwindcss": "^4.2.1",
     "axios": "^1.4.0"
   }
 }

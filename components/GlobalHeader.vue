@@ -1,34 +1,91 @@
 <template>
-  <div class="p-3 md:flex flex-wrap justify-between items-center">
+  <div class="z-50 p-3 md:flex flex-wrap justify-between items-center">
     <div class="flex md:w-1/4 xl:w-1/3 md:block justify-between">
       <nuxt-link to="/">
-        <img
-          v-if="headerLogo"
-          :src="headerLogo.filename"
-          alt="Black Pearl Painters company logo"
-          class="w-3/4 md:w-5/6"
-        />
+        <img v-if="headerLogo" :src="headerLogo.filename" alt="Black Pearl Painters company logo" class="w-3/4" />
       </nuxt-link>
       <button class="md:hidden" type="button" @click="toggleNav">
         <IconMenu class="w-10 h-10 text-gray-600" />
       </button>
     </div>
 
-    <nav class="md:w-1/3 md:block text-xs lg:text-sm font-body">
-      <transition name="slide" appear>
-        <ul :class="isOpen ? 'block' : 'hidden'" class="md:flex space-x-8 text-right md:text-left">
-          <li
-            v-for="menu in headerNavigation"
-            :key="menu._uid"
-            class="py-3 md:py-0 md:border-none border-b border-b-gray-100"
-          >
-            <nuxt-link class="uppercase opacity-50 hover:opacity-100" :to="$formRoute({ url: menu.link.cached_url })">
-              {{ menu.label }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </transition>
-    </nav>
+    <div class="md:hidden">
+      <div
+        :class="`mobile z-[52] fixed inset-0 bg-black transition duration-150 ${
+          isMobileMenuOpen ? 'bg-opacity-75' : 'bg-opacity-0 pointer-events-none'
+        }`"
+      >
+        <div
+          :class="`flex transform transition-transform duration-150 ease-in-out ${
+            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`"
+        >
+          <div>
+            <button
+              class="flex justify-center items-center bg-white rounded-full ml-4 mr-4 mt-4 h-12 w-12"
+              ref="closeButtonRef"
+              @click="toggleNav"
+              type="button"
+            >
+              <span class="sr-only">Close menu</span>
+              <IconClose class="w-6 h-6 text-primary-default" file="close-icon" alt="Close Menu" />
+            </button>
+          </div>
+
+          <div class="flex flex-col justify-between h-screen w-full bg-white">
+            <nav>
+              <ul>
+                <li v-for="menu in headerNavigation" class="p-4 border-b border-gray-100" :key="menu._uid">
+                  <nuxt-link
+                    v-if="menu.link"
+                    :to="$formRoute({ url: menu.link.cached_url })"
+                    class="uppercase"
+                    >{{ menu.label }}</nuxt-link
+                  >
+
+                  <div v-else>
+                    <MobileSubmenu :menu="menu" :isParentOpen="isMobileMenuOpen" />
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute w-full hidden md:block">
+      <nav class="md:w-1/3 md:block text-xs lg:text-sm font-body mx-auto">
+          <ul class="md:flex space-x-8 text-right md:text-left">
+            <li
+              v-for="menu in headerNavigation"
+              :key="menu._uid"
+              class="py-3 md:py-0 md:border-none border-b border-b-gray-100"
+            >
+              <nuxt-link
+                v-if="menu.link"
+                class="uppercase opacity-50 hover:opacity-100"
+                :to="$formRoute({ url: menu.link.cached_url })"
+              >
+                {{ menu.label }}
+              </nuxt-link>
+
+              <div class="relative group" v-else>
+                <span class="uppercase opacity-50 hover:opacity-100 cursor-pointer">{{ menu.label }}</span>
+                <ul
+                  class="absolute bg-white shadow-md rounded-lg py-2 px-4 mt-2 opacity-0 transform -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                  <li v-for="subMenu in menu.submenu" :key="subMenu._uid">
+                    <nuxt-link :to="$formRoute({ url: subMenu.link.cached_url })">
+                      {{ subMenu.label }}
+                    </nuxt-link>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+      </nav>
+    </div>
 
     <div class="relative hidden md:block">
       <div class="w-full flex flex-wrap justify-end items-center">
@@ -59,6 +116,8 @@ import { mapState } from 'vuex'
 import IconPhone from '@/assets/images/icons/icon-phone.svg?inline'
 import IconFacebook from '@/assets/images/icons/icon-facebook.svg?inline'
 import IconMenu from '@/assets/images/icons/icon-menu.svg?inline'
+import IconClose from '@/assets/images/icons/icon-close.svg?inline'
+import MobileSubmenu from '@/components/MobileSubmenu'
 
 export default {
   name: 'GlobalHeader',
@@ -66,11 +125,13 @@ export default {
     IconPhone,
     IconFacebook,
     IconMenu,
+    IconClose,
+    MobileSubmenu,
   },
 
   data() {
     return {
-      isOpen: false,
+      isMobileMenuOpen: false,
       activeClass: 'active',
     }
   },
@@ -83,13 +144,13 @@ export default {
   },
   watch: {
     $route(to, from) {
-      this.isOpen = false
+      this.isMobileMenuOpen = false
     },
   },
 
   methods: {
     toggleNav: function () {
-      this.isOpen = !this.isOpen
+      this.isMobileMenuOpen = !this.isMobileMenuOpen
     },
   },
 }

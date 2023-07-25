@@ -179,6 +179,9 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import { useStoryblokApi } from '@storyblok/nuxt-2'
+
 export default {
   name: 'GetInTouch',
   data() {
@@ -199,6 +202,22 @@ export default {
       },
       reponseMessage: null,
       reponseState: null,
+    }
+  },
+  computed: {
+    ...mapState('global', ['loaded']),
+  },
+  async fetch() {
+    const version = process.env.IS_PREVIEW ? 'draft' : 'published'
+    const storyblokApi = useStoryblokApi()
+
+    if (!this.loaded) {
+      const globalRes = await storyblokApi.get('cdn/stories/global', {
+        version: version,
+      })
+
+      await this.$store.commit('global/setGlobals', globalRes.data.story.content)
+      await this.$store.commit('global/setLoaded', true)
     }
   },
   methods: {

@@ -13,12 +13,15 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@nuxtjs/svg": "^0.1.12",
-    "nuxt": "^2.0.0",
+    "@storyblok/nuxt-2": "^2.0.6",
+    "nuxt": "^2.15.7",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-gmaps": "^1.1.8",
+    "swiper": "6.7.5",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^1.0.0"
+    "@nuxtjs/tailwindcss": "^4.2.1",
+    "axios": "^1.4.0"
   }
 }

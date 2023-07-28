@@ -1,2 +1,2 @@
 [build.environment]
-  IS_PREVEW=false
+  IS_PREVEW="false"

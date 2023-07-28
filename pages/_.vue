@@ -15,6 +15,18 @@ export default {
   computed: {
     ...mapState('global', ['loaded']),
   },
+  head() {
+    return {
+      title: `${this.story.name} | Black Pearl Painters`,
+      meta: [
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.story.name,
+        },
+      ],
+    }
+  },
   async fetch() {
     const fullSlug = this.$route.path === '/' ? 'home' : this.$route.path
     const version = this.$config.isPreview ? 'draft' : 'published'

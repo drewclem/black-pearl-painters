@@ -204,6 +204,18 @@ export default {
       reponseState: null,
     }
   },
+  head() {
+    return {
+      title: `Get in Touch | Black Pearl Painters`,
+      meta: [
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Get in Touch',
+        },
+      ],
+    }
+  },
   computed: {
     ...mapState('global', ['loaded']),
   },

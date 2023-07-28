@@ -71,11 +71,9 @@ export default {
     ],
     script: [
       {
-        src: '<script src="//app.storyblok.com/f/storyblok-v2-latest.js" type="text/javascript"></script>',
-        type: 'text/javascript',
-      },
-      {
-        src: 'src="https://www.enhancify.com/paymentcalculatorwidget/',
+        src: 'https://www.enhancify.com/paymentcalculatorwidget/',
+        async: true,
+        defer: true,
       },
     ],
   },

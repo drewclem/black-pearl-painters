@@ -52,7 +52,7 @@
     </div>
 
     <div class="absolute left-0 right-0 w-full hidden md:block">
-      <nav class="md:w-1/3 md:block text-xs lg:text-sm font-body mx-auto">
+      <nav class="md:block text-xs lg:text-sm font-body mx-auto">
         <ul class="md:flex space-x-8 text-right md:text-left justify-center">
           <li
             v-for="menu in headerNavigation"

@@ -7,6 +7,7 @@ import TwoColImageRight from '~/components/storyblok/TwoColImageRight.vue'
 import CustomerReviews from '~/components/storyblok/CustomerReviews.vue'
 import GoogleMap from '~/components/storyblok/GoogleMap.vue'
 import TwoColRichText from '~/components/storyblok/TwoColRichText.vue'
+import CodeSnippet from '~/components/storyblok/CodeSnippet.vue'
 
 Vue.component('Page', Page)
 Vue.component('Homepage', Homepage)
@@ -16,3 +17,4 @@ Vue.component('TwoColImageRight', TwoColImageRight)
 Vue.component('CustomerReviews', CustomerReviews)
 Vue.component('GoogleMap', GoogleMap)
 Vue.component('TwoColRichText', TwoColRichText)
+Vue.component('CodeSnippet', CodeSnippet)

@@ -69,6 +69,15 @@ export default {
         href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap',
       },
     ],
+    script: [
+      {
+        src: '<script src="//app.storyblok.com/f/storyblok-v2-latest.js" type="text/javascript"></script>',
+        type: 'text/javascript',
+      },
+      {
+        src: 'src="https://www.enhancify.com/paymentcalculatorwidget/',
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -155,7 +164,7 @@ export default {
   ],
 
   axios: {
-    baseURL: '/'
+    baseURL: '/',
   },
 
   fontawesome: {

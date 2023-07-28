@@ -33,6 +33,8 @@ export default {
       await this.$store.commit('global/setGlobals', globalRes.data.story.content)
       await this.$store.commit('global/setLoaded', true)
     }
+
+    console.log(version)
   },
   mounted() {
     useStoryblokBridge(this.story.id, newStory => (this.story = newStory))

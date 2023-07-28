@@ -17,7 +17,9 @@ export default {
   },
   async fetch() {
     const fullSlug = this.$route.path === '/' ? 'home' : this.$route.path
-    const version = process.env.IS_PREVIEW ? 'draft' : 'published'
+    const version = this.$config.isPreview ? 'draft' : 'published'
+
+    console.log('is preview', this.$config.isPreview)
 
     const storyblokApi = useStoryblokApi()
     const { data } = await storyblokApi.get(`cdn/stories/${fullSlug}`, {
@@ -33,8 +35,6 @@ export default {
       await this.$store.commit('global/setGlobals', globalRes.data.story.content)
       await this.$store.commit('global/setLoaded', true)
     }
-
-    console.log(version)
   },
   mounted() {
     useStoryblokBridge(this.story.id, newStory => (this.story = newStory))

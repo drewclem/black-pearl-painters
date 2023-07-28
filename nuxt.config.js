@@ -144,6 +144,9 @@ export default {
       },
     ],
   ],
+  publicRuntimeConfig: {
+    isPreview: process.env.IS_PREVIEW,
+  },
   /*
    ** Nuxt.js modules
    */

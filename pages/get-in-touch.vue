@@ -208,7 +208,7 @@ export default {
     ...mapState('global', ['loaded']),
   },
   async fetch() {
-    const version = process.env.IS_PREVIEW ? 'draft' : 'published'
+    const version = this.$config.isPreview ? 'draft' : 'published'
     const storyblokApi = useStoryblokApi()
 
     if (!this.loaded) {

@@ -72,8 +72,6 @@ export default {
     script: [
       {
         src: 'https://www.enhancify.com/paymentcalculatorwidget/',
-        async: true,
-        defer: true,
       },
     ],
   },
@@ -120,7 +118,6 @@ export default {
                 }
               })
 
-              console.log(routes)
               callback(null, routes)
             })
         })

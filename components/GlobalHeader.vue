@@ -1,6 +1,6 @@
 <template>
-  <div class="z-50 p-3 md:flex flex-wrap justify-between items-center">
-    <div class="flex md:w-1/4 xl:w-1/3 md:block justify-between">
+  <header class="z-50 p-3 md:flex flex-wrap justify-between items-center">
+    <div class="flex lg:w-1/4 md:block justify-between">
       <nuxt-link to="/">
         <img v-if="headerLogo" :src="headerLogo.filename" alt="Black Pearl Painters company logo" class="w-3/4" />
       </nuxt-link>
@@ -36,12 +36,9 @@
             <nav>
               <ul>
                 <li v-for="menu in headerNavigation" class="p-4 border-b border-gray-100" :key="menu._uid">
-                  <nuxt-link
-                    v-if="menu.link"
-                    :to="$formRoute({ url: menu.link.cached_url })"
-                    class="uppercase"
-                    >{{ menu.label }}</nuxt-link
-                  >
+                  <nuxt-link v-if="menu.link" :to="$formRoute({ url: menu.link.cached_url })" class="uppercase">{{
+                    menu.label
+                  }}</nuxt-link>
 
                   <div v-else>
                     <MobileSubmenu :menu="menu" :isParentOpen="isMobileMenuOpen" />
@@ -54,36 +51,36 @@
       </div>
     </div>
 
-    <div class="absolute w-full hidden md:block">
+    <div class="absolute left-0 right-0 w-full hidden md:block">
       <nav class="md:w-1/3 md:block text-xs lg:text-sm font-body mx-auto">
-          <ul class="md:flex space-x-8 text-right md:text-left">
-            <li
-              v-for="menu in headerNavigation"
-              :key="menu._uid"
-              class="py-3 md:py-0 md:border-none border-b border-b-gray-100"
+        <ul class="md:flex space-x-8 text-right md:text-left justify-center">
+          <li
+            v-for="menu in headerNavigation"
+            :key="menu._uid"
+            class="py-3 md:py-0 md:border-none border-b border-b-gray-100"
+          >
+            <nuxt-link
+              v-if="menu.link"
+              class="uppercase opacity-50 hover:opacity-100"
+              :to="$formRoute({ url: menu.link.cached_url })"
             >
-              <nuxt-link
-                v-if="menu.link"
-                class="uppercase opacity-50 hover:opacity-100"
-                :to="$formRoute({ url: menu.link.cached_url })"
-              >
-                {{ menu.label }}
-              </nuxt-link>
+              {{ menu.label }}
+            </nuxt-link>
 
-              <div class="relative group" v-else>
-                <span class="uppercase opacity-50 hover:opacity-100 cursor-pointer">{{ menu.label }}</span>
-                <ul
-                  class="absolute bg-white shadow-md rounded-lg py-2 px-4 mt-2 opacity-0 transform -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0"
-                >
-                  <li v-for="subMenu in menu.submenu" :key="subMenu._uid">
-                    <nuxt-link :to="$formRoute({ url: subMenu.link.cached_url })">
-                      {{ subMenu.label }}
-                    </nuxt-link>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+            <div class="relative group" v-else>
+              <span class="uppercase opacity-50 hover:opacity-100 cursor-pointer">{{ menu.label }}</span>
+              <ul
+                class="absolute bg-white shadow-md rounded-lg py-2 px-4 mt-2 opacity-0 transform -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0"
+              >
+                <li v-for="subMenu in menu.submenu" :key="subMenu._uid">
+                  <nuxt-link :to="$formRoute({ url: subMenu.link.cached_url })">
+                    {{ subMenu.label }}
+                  </nuxt-link>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </nav>
     </div>
 
@@ -108,7 +105,7 @@
         />
       </a>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>

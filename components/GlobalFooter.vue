@@ -22,14 +22,6 @@
             <nuxt-link to="/get-in-touch" class="button hover:shadow-md">Request a Quote</nuxt-link>
           </button>
         </div>
-
-        <a href="https://onlineappintegration.enerbank.com/">
-          <img
-            src="~/assets/images/2022Banner_6Mo_SAC_HZ.png"
-            alt="6 Months same as cash financing available."
-            class="w-64"
-          />
-        </a>
       </div>
     </section>
     <footer class="py-10 px-4">

@@ -53,6 +53,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    loop: {
+      type: Boolean,
+      default: true,
+    },
   },
   data() {
     return {
@@ -91,7 +95,7 @@ export default {
         delay: 3000,
         pauseOnMouseEnter: true,
       },
-      loop: true,
+      loop: this.loop,
       breakpoints: {
         640: {
           slidesPerView: 3,

@@ -45,9 +45,9 @@
         </div>
 
         <div class="flex justify-center md:justify-end md:w-1/3 items-center">
-          <a href="/" class="hidden lg:block group">
+          <a href="tel:253-203-5335" class="hidden lg:block group">
             <IconPhone class="w-6 h-6 inline mr-2 text-gray-400" />
-            <span class="text-xs"> (253) 203-5355 </span>
+            <span class="text-xs"> (253) 203-5335 </span>
           </a>
           <a href="https://www.facebook.com/BlackPearlPainters/" class="hidden lg:block ml-6 mr-2">
             <IconFacebook class="w-6 h-6 text-gray-400 hover:text-gray-600" />

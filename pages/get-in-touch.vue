@@ -36,62 +36,145 @@
         >
           {{ responseMessage }}
         </p>
-        <form @submit.prevent="handleSubmit" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form action=https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHp0000025y70 method="POST">
           <input class="hidden" type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="oid" value="00DHp0000025y70" />
+          <input type=hidden name="retURL" value=http://>
 
-          <div class="grid md:grid-cols-3 gap-6 mb-4">
+          <div class="grid md:grid-cols-2 gap-6 mb-4">
             <div class=" ">
-              <label class="text-xs text-gray-700 font-body block mb-2" for="name">Name</label>
-              <input type="text" class="border b-gray-300 p-1 w-full" id="name" v-model="form.name" required />
+              <label class="text-xs text-gray-700 font-body block mb-2" for="first_name">First Name</label>
+              <input
+                class="border b-gray-300 p-1 w-full"
+                id="first_name"
+                maxlength="40"
+                name="first_name"
+                size="20"
+                type="text"
+              />
+            </div>
+            <div class=" ">
+              <label class="text-xs text-gray-700 font-body block mb-2" for="last_name">Last Name</label>
+              <input
+                class="border b-gray-300 p-1 w-full"
+                id="last_name"
+                maxlength="40"
+                name="last_name"
+                size="20"
+                type="text"
+              />
             </div>
 
             <div class=" ">
               <label class="text-xs text-gray-700 font-body block mb-2" for="email">Email</label>
-              <input type="email" class="border b-gray-300 p-1 w-full" id="email" v-model="form.email" required />
+              <input
+                type="email"
+                class="border b-gray-300 p-1 w-full"
+                id="email"
+                maxlength="80"
+                name="email"
+                size="20"
+              />
             </div>
 
             <div class="">
               <label class="text-xs text-gray-700 font-body block mb-2" for="phone">Phone Number</label>
-              <input type="text" class="border b-gray-300 p-1 w-full" id="phone" v-model="form.phone" required />
+              <input
+                type="text"
+                class="border b-gray-300 p-1 w-full"
+                id="phone"
+                maxlength="40"
+                name="email"
+                size="20"
+              />
             </div>
           </div>
 
           <div>
             <div class="grid md:grid-cols-2 gap-6 mb-4">
               <div>
-                <label class="text-xs text-gray-700 font-body block mb-2" for="address-1">Address 1</label>
+                <label class="text-xs text-gray-700 font-body block mb-2" for="street">Street</label>
+                <textarea type="text" class="border b-gray-300 p-1 w-full" id="street" rows="1" />
+              </div>
+
+              <div>
+                <label class="text-xs text-gray-700 font-body block mb-2" for="city">City</label>
                 <input
                   type="text"
                   class="border b-gray-300 p-1 w-full"
-                  id="address-1"
-                  v-model="form.address_1"
-                  required
+                  id="city"
+                  maxlength="40"
+                  name="city"
+                  size="20"
                 />
               </div>
+            </div>
+          </div>
 
-              <div>
-                <label class="text-xs text-gray-700 font-body block mb-2" for="address-2"
-                  >Address 2 <span class="text-xs">(optional)</span></label
-                >
-                <input type="text" class="border b-gray-300 p-1 w-full" id="address-2" v-model="form.address_2" />
+          <div class="grid md:grid-cols-2 gap-6 mb-4">
+            <div>
+              <label class="text-xs text-gray-700 font-body block mb-2" for="state">State</label>
+              <div class="select-wrap">
+                <select id="state_code" class="border b-gray-300 appearance-none p-1 w-full" name="state_code">
+                  <option value="">--None--</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DE">Delaware</option>
+                  <option value="DC">District of Columbia</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="IA">Iowa</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="ME">Maine</option>
+                  <option value="MD">Maryland</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MT">Montana</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NY">New York</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VT">Vermont</option>
+                  <option value="VA">Virginia</option>
+                  <option value="WA">Washington</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WY">Wyoming</option>
+                </select>
               </div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6 mb-4">
-              <div>
-                <label class="text-xs text-gray-700 font-body block mb-2" for="city">City</label>
-                <input type="text" class="border b-gray-300 p-1 w-full" id="city" v-model="form.city" />
-              </div>
-
-              <div>
-                <label class="text-xs text-gray-700 font-body block mb-2" for="state">State</label>
-                <input type="text" class="border b-gray-300 p-1 w-full" id="state" v-model="form.state" />
-              </div>
-
-              <div>
-                <label class="text-xs text-gray-700 font-body block mb-2" for="zip">Zip</label>
-                <input type="text" class="border b-gray-300 p-1 w-full" id="zip" v-model="form.zip" />
-              </div>
+            <div>
+              <label class="text-xs text-gray-700 font-body block mb-2" for="zip">Zip</label>
+              <input type="text" class="border b-gray-300 p-1 w-full" id="zip" maxlength="20" name="zip" size="20" />
             </div>
           </div>
 
@@ -100,16 +183,16 @@
               <label class="text-xs text-gray-700 font-body block mb-2" for="time">Best Time to Contact</label>
               <div class="select-wrap">
                 <select
-                  id="time"
-                  class="w-full appearance-none border b-gray-300 p-1 rounded-none bg-white"
-                  v-model="form.timeToContact"
-                  required
+                  id="00NHp00000hhO6J"
+                  name="00NHp00000hhO6J"
+                  class="border b-gray-300 appearance-none p-1 w-full"
+                  title="Best Time to Contact"
                 >
-                  <option selected disabled>Select One</option>
-                  <option value="morning">Morning</option>
-                  <option value="lunch">Lunch</option>
-                  <option value="afternoon">Afternoon</option>
-                  <option value="evening">Evening</option>
+                  <option value="">--None--</option>
+                  <option value="Morning">Morning</option>
+                  <option value="Lunch">Lunch</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Evening">Evening</option>
                 </select>
               </div>
             </div>
@@ -118,17 +201,17 @@
               <label class="text-xs text-gray-700 font-body block mb-2" for="project">Project Type</label>
               <div class="select-wrap">
                 <select
-                  id="project"
-                  class="w-full appearance-none border b-gray-300 p-1 rounded-none bg-white"
-                  v-model="form.projectType"
-                  required
+                  id="00NHp00000hhO6E"
+                  name="00NHp00000hhO6E"
+                  class="border b-gray-300 appearance-none p-1 w-full"
+                  title="Project Type"
                 >
-                  <option selected disabled>Select One</option>
-                  <option value="painting">Painting</option>
-                  <option value="coating">Coating</option>
-                  <option value="light carpentry">Light Carpentry</option>
-                  <option value="window coverings">Window Coverings</option>
-                  <option value="others">Other</option>
+                  <option value="">--None--</option>
+                  <option value="Painting">Painting</option>
+                  <option value="Coating">Coating</option>
+                  <option value="Light Carpentry">Light Carpentry</option>
+                  <option value="Window Coverings">Window Coverings</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
             </div>
@@ -139,17 +222,17 @@
               >
               <div class="select-wrap">
                 <select
-                  id="howdYouHear"
-                  class="w-full appearance-none border b-gray-300 p-1 rounded-none bg-white"
-                  v-model="form.howdYouHear"
-                  required
+                  id="00NHp00000hhO5z"
+                  name="00NHp00000hhO5z"
+                  class="border b-gray-300 appearance-none p-1 w-full"
+                  title="Inbound Lead Source"
                 >
-                  <option selected disabled>Select One</option>
+                  <option value="">--None--</option>
+                  <option value="Referral">Referral</option>
                   <option value="Google">Google</option>
                   <option value="Facebook">Facebook</option>
-                  <option value="Direct Mailing">Direct Mailing</option>
+                  <option value="Direct Mailer">Direct Mailer</option>
                   <option value="Home Advisor">Home Advisor</option>
-                  <option value="Referral">Referral</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
@@ -157,13 +240,14 @@
           </div>
 
           <div class="mb-6">
-            <label class="text-xs text-gray-700 font-body block mb-2" for="comments">Comments</label>
+            <label class="text-xs text-gray-700 font-body block mb-2" for="comments">Customer Comments</label>
             <textarea
-              id="comments"
-              rows="8"
+              id="00NHp00000hhO7g"
               class="w-full border b-gray-400 p-1"
-              v-model="form.comments"
-              required
+              name="00NHp00000hhO7g"
+              rows="3"
+              type="text"
+              wrap="soft"
             ></textarea>
           </div>
 
@@ -171,7 +255,7 @@
             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
           </p>
 
-          <button class="btn hover:shadow-md" type="submit">Get in Touch</button>
+          <input type="submit" class="btn hover:shadow-md" name="submit" />
         </form>
       </div>
     </div>
@@ -212,6 +296,10 @@ export default {
           hid: 'og:title',
           property: 'og:title',
           content: 'Get in Touch',
+        },
+        {
+          'http-equiv': 'Content-Type',
+          content: 'text/html; charset=utf-8',
         },
       ],
     }

@@ -36,10 +36,14 @@
         >
           {{ responseMessage }}
         </p>
-        <form action=https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHp0000025y70 method="POST">
+        <form
+          action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHp0000025y70"
+          method="POST"
+        >
           <input class="hidden" type="hidden" name="form-name" value="contact" />
+
           <input type="hidden" name="oid" value="00DHp0000025y70" />
-          <input type=hidden name="retURL" value=http://>
+          <input type=hidden name="retURL" value=https://blackpearlpainters.com/get-in-touch>
 
           <div class="grid md:grid-cols-2 gap-6 mb-4">
             <div class=" ">
@@ -256,6 +260,14 @@
           </p>
 
           <input type="submit" class="btn hover:shadow-md" name="submit" />
+
+          <input
+            type="hidden"
+            name="captcha_settings"
+            value='{"keyname":"Website_Form_Fill","fallback":"true","orgId":"00DHp0000025y70","ts":""}'
+          />
+          <input type="hidden" name="oid" value="00DHp0000025y70" />
+          <input type=hidden name="retURL" value=http://>
         </form>
       </div>
     </div>

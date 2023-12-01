@@ -43,7 +43,7 @@
           <input class="hidden" type="hidden" name="form-name" value="contact" />
 
           <input type="hidden" name="oid" value="00DHp0000025y70" />
-          <input type=hidden name="retURL" value=https://blackpearlpainters.com/get-in-touch>
+          <input type="hidden" name="retURL" value="https://blackpearlpainters.com/thank-you" />
 
           <div class="grid md:grid-cols-2 gap-6 mb-4">
             <div class=" ">
@@ -179,6 +179,15 @@
             <div>
               <label class="text-xs text-gray-700 font-body block mb-2" for="zip">Zip</label>
               <input type="text" class="border b-gray-300 p-1 w-full" id="zip" maxlength="20" name="zip" size="20" />
+            </div>
+
+            <div hidden>
+              <label for="country_code">Country</label
+              ><select id="country_code" name="country_code">
+                <option value="US" selected>United States</option>
+                <option value="CA">Canada</option>
+                <option value="US">United States</option>
+              </select>
             </div>
           </div>
 
